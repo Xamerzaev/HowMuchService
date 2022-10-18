@@ -1,8 +1,13 @@
-from signal import pause
 from django.shortcuts import render
-from googlesearch import search
 
-query = ''
+# https://www.ozon.ru/
+# https://www.wildberries.ru/
+# https://www.dns-shop.ru/
+# https://www.eldorado.ru
+# https://aliexpress.ru/
+# https://www.mvideo.ru/
+# http://www.sotovik.ru/
 
-for i in search(query, tld="co.in", num=10, stop=10, pause=2):
-    print(i)
+
+def index(request):
+    return render(request, 'index.html', context={})
